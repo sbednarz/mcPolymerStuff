@@ -2,6 +2,8 @@
 
 My tools & examples
 
+mcPolymer is Monte Carlo simulation program of radical polymerization
 
-mcPolymer in universal polymerization simulation tool based on the Monte Carlo technique:
 [https://www.itc.tu-clausthal.de/mcpolymer/](mcPolymer)
+
+created by Marco Drache, Georg Drache, Benjamin Hosemann and distibuted as free software.
