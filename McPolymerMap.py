@@ -137,7 +137,7 @@ for case in cases:
     cld = processCld(case)
     conc = processConc(case)
     
-    key = "{}={}".format(p['var']['param'], p['var']['val'])
+    key = "{}={}".format(params['var']['param'], params['var']['val'])
     sim[key] = {}
     sim[key]['params'] = params
     sim[key]['conc'] = conc
