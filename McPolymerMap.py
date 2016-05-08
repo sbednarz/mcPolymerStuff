@@ -15,13 +15,10 @@ def processMwd(case):
         s = re.search('\/(.*?)\.', f).group(1)
         t = re.search('(\d\..*\d)', f).group(0)
         time = float(t)
-        if mwd.has_key(s):
-            mwd[s][time] = np.genfromtxt(f)    
-        else:
+        if not mwd.has_key(s):
             mwd[s] = {}
-    
+        mwd[s][time] = np.genfromtxt(f)    
     return mwd
-
 
 
 def processCld(case):
@@ -85,8 +82,13 @@ def processModel(case):
             if k[0]=='#var!':
                 line = model[i+1]
                 k = line.split()
-                params['var']['param'] = k[1]
-                params['var']['val'] = float(k[2])
+                #print k[1]
+                if len(k) == 3:
+                    params['var']['param'] = k[1]
+                    params['var']['val'] = float(k[2])
+                else:
+                    params['var']['param'] = k[0]
+                    params['var']['val'] = float(k[1])
                 
             elif k[0]=='#desc!':
                 line = model[i+1].rstrip()
@@ -132,12 +134,15 @@ sim['desc'] = desc
 
 cases = glob.glob('case*')
 for case in cases:
+    print case
     params = processModel(case)
     mwd = processMwd(case)
     cld = processCld(case)
     conc = processConc(case)
     
-    key = "{}={}".format(params['var']['param'], params['var']['val'])
+    sim['var'] = params['var']['param']
+    key = float(params['var']['val'])
+    #print key
     sim[key] = {}
     sim[key]['params'] = params
     sim[key]['conc'] = conc
