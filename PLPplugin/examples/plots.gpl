@@ -1,7 +1,7 @@
 
 set term pdf font ",12"
 set output 'plp_example1.pdf'
-set xrange [3:6]
+set xrange [3.5:6]
 set xlabel 'logM'
 set ylabel 'w(logM)'
 set mxtics 5
