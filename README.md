@@ -7,4 +7,4 @@ Here is my stuff:
 [McPolymerMap.py](https://github.com/sbednarz/mcPolymerStuff/blob/master/McPolymerMap.py) - Mapping of mcPolymer simulation results (set of files) to a Python dictionary
 
 
-[PLPplugin](https://github.com/sbednarz/mcPolymerStuff/tree/master/PLPplugin) - Pulsed Lased Polymerization (PLP) plugin for mcPolymer. See [examples](https://github.com/sbednarz/mcPolymerStuff/tree/master/PLPplugin/examples) of uses and comparison of results with a commercial software (summary [here](https://github.com/sbednarz/mcPolymerStuff/blob/master/PLPplugin/examples/examples.pdf)).
+[PLPplugin](https://github.com/sbednarz/mcPolymerStuff/tree/master/PLPplugin) - Pulsed Lased Polymerization (PLP) plugin for mcPolymer. See [examples](https://github.com/sbednarz/mcPolymerStuff/tree/master/PLPplugin/examples) of uses and comparison with results got by commercial software (summary [here](https://github.com/sbednarz/mcPolymerStuff/blob/master/PLPplugin/examples/examples.pdf)).
