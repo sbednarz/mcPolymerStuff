@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#SBATCH --mem=79000
+#SBATCH --mem=39000
 
 ## Liczba węzłów
 #SBATCH -N 1
@@ -12,7 +12,7 @@
 #SBATCH --time=01:00:00 
 
 ## Nazwa grantu do rozliczenia zużycia zasobów
-#SBATCH -A sbedg03
+#SBATCH -A sbedg05
 
 ## Specyfikacja partycji
 #SBATCH -p plgrid-short
@@ -28,6 +28,6 @@
 cd $SLURM_SUBMIT_DIR
 
 srun echo "Job ID: $SLURM_JOB_ID `hostname` `date`"
-srun --mem-per-cpu=79000 mcPolymer experiment.tcl
+srun --mem-per-cpu=39000 mcPolymer experiment.tcl
 srun date
 srun echo "Happy end."

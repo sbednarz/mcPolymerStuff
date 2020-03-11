@@ -1,5 +1,5 @@
 # time tick
-set DT 0.01
+set DT 0.001
 # Burst delay
 set BD 0
 # Bursts number
@@ -23,8 +23,10 @@ set MW 158.15
 set M0 [expr 1124/158.15]
 set ki 160
 set kp 16
+
 set ktd 5.4e5
 set ktc 0.6e5
+
 set ktr 5e-3
 set k1 1e8
 
