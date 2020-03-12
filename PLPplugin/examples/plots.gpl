@@ -15,4 +15,16 @@ set ylabel 'w(logM)'
 set mxtics 5
 plot 'Vana2002/D.5.00000000000000e+01.HlogM.dat' u 1:2 w l t 'MWD' lt 2
 
+set output 'plp_example3.pdf'
+set xrange [0:2000]
+set xlabel 'Chain length'
+set ylabel 'w(logM)'
+set arrow from 1*9*0.4*120,0 to 1*9*0.4*120,2.5 nohead lt 0
+set arrow from 2*9*0.4*120,0 to 2*9*0.4*120,2.5 nohead lt 0
+set arrow from 3*9*0.4*120,0 to 3*9*0.4*120,2.5 nohead lt 0
+
+plot\
+'Wulkow1996/D.2.00000000000000e+00.HlogM.dat' u (10**$1):2 w l t '4 pulses',\
+'Wulkow1996/D.4.00000000000000e+00.HlogM.dat' u (10**$1):2 w l t '9 pulses',\
+'Wulkow1996/D.7.00000000000000e+00.HlogM.dat' u (10**$1):2 w l t '16 pulses'
 
